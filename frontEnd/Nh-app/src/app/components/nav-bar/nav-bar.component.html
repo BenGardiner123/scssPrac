@@ -1,0 +1,56 @@
+<div class="NavbarContainer">
+
+    <!-- Container holding All links and logo except Logout. -->
+    <div class="LinkContainer">
+
+        <div class="Logo">
+            <a style="color: rgb(20,100,180)">Northern </a><br>
+            <a>Health</a>
+        </div>
+
+        <div class="Link" (click)="Select('Alerts')" [ngStyle]="{'background-color': this.selectedTab === 'Alerts' ? 'white' : ''}">
+            <div class="LinkText" [ngStyle]="{'color': this.selectedTab === 'Alerts' ? 'color($color_3)' : ''}">
+                Alerts
+            </div>
+            <div class="AlertContainer">
+                <img class="AlertIcon" src="../../../assets/Images/Exclamation1.png">
+                <div class="AlertNumber">
+                    9
+                </div>
+            </div>
+        </div>
+
+        <div routerLink="patient" class="Link" (click)="Select('Patient')" [ngStyle]="{'background-color': this.selectedTab === 'Patient' ? 'white' : ''}">
+            <div class="LinkText" [ngStyle]="{'color': this.selectedTab === 'Patient' ? 'grey' : ''}">
+                Patient
+            </div>
+        </div>
+
+        <div routerLink="library" class="Link" (click)="Select('Library')" [ngStyle]="{'background-color': this.selectedTab === 'Library' ? 'white' : ''}">
+            <div class="LinkText" [ngStyle]="{'color': this.selectedTab === 'Library' ? 'grey' : ''}">
+                Library
+            </div>
+        </div>
+
+        <div routerLink="resources" class="Link" (click)="Select('Resources')" [ngStyle]="{'background-color': this.selectedTab === 'Resources' ? 'white' : ''}">
+            <div class="LinkText" [ngStyle]="{'color': this.selectedTab === 'Resources' ? 'grey' : ''}">
+                Resources
+            </div>
+        </div>
+
+        <div routerLink="staff"class="Link" (click)="Select('Register Staff')" [ngStyle]="{'background-color': this.selectedTab === 'Register Staff' ? 'white' : ''}">
+            <div class="LinkText" [ngStyle]="{'color': this.selectedTab === 'Register Staff' ? 'grey' : ''}">
+                Register Staff
+            </div>
+        </div>
+
+    </div>
+
+
+    <div routerLink="login" class="Link">
+        <div class="LinkText">
+            Logout
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,185 @@
+<div class="container">
+    <div class="success" *ngIf="success">
+        <div></div>
+        <div class="AlertContainer">
+            <img class="AlertIcon" src="../../../assets/Images/checkmark.png">
+        </div>
+        <div>
+            <h3>Success</h3>
+            <h5>Successfully added a patient!</h5>
+        </div>  
+    </div>
+    <div class="fail" *ngIf="fail">
+        <div></div>
+        <div class="AlertContainer">
+            <img class="AlertIcon" src="../../../assets/Images/Exclamation1.png">
+        </div>
+        <div>
+            <h3>Unsuccesful</h3>
+            <h5>Please check the highlighted fields.</h5>
+        </div>  
+    </div>
+    <div class="heading">Add Patient</div>
+    <div class="contents flex">
+        <div class="patient-information">
+            <div class="heading-2">Patient Information</div>
+            <form [formGroup]="patientInformationForm" (ngSubmit)="onSubmit()">
+                <div>
+                    <label>Title</label>
+                    <select formControlName="title" >
+                    <!-- (change)="selectTitle($event)" -->
+                        <option *ngFor="let title of titles" [ngValue]="title">{{title}}
+                        </option>
+                    </select>
+                </div>
+                <div>
+                    <label>Hospital Number</label>
+                    <input type="number" formControlName="hospitalNumber">
+                </div>
+                <div>
+                    <label>Given Name</label>
+                    <input type="text" formControlName="givenName">
+                </div>
+                <div>
+                    <label>Family Name</label>
+                    <input type="text" formControlName="familyName">
+                </div>
+                <div>
+                    <label>Gender</label>
+                <select formControlName="gender">
+                    <option *ngFor="let gender of genders" [ngValue]="gender">{{gender}}</option>
+                </select>
+                </div>
+                <div>
+                    <label>D.O.B</label>
+                    <input type="text" placeholder="DD/MM/YYYY" formControlName="dateOfBirth">
+                </div>
+                <div>
+                    <label>Country of Birth</label>
+                    <select formControlName="countryOfBirth">
+                        <option *ngFor="let cob of countryOfBirths" [ngValue]="cob">{{cob}}</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Preferred Language</label>
+                    <select formControlName="preferredLanguage">
+                        <option *ngFor="let lan of preferredLanguages" [ngValue]="lan">{{lan}}</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email" formControlName="email">
+                </div>
+                <div>
+                    <label>Street Address</label>
+                    <input type="text" formControlName="address">
+                </div>
+                <div>
+                    <label>Suburb</label>
+                    <input type="text" formControlName="suburb">
+                </div>
+                <div>
+                    <label>Postcode</label>
+                    <input type="number" formControlName="postcode">
+                </div>
+                <div>
+                    <label>Mobile</label>
+                    <input type="number" formControlName="mobile">
+                </div>
+                <div>
+                    <label>Home Phone</label>
+                    <input type="number" formControlName="homePhone">
+                </div>
+                <div>
+                    <label>Lives Alone</label>
+                <input type="checkbox" formControlName="livesAlone">
+                </div>
+            </form>
+        </div>
+
+
+        <div class="categories-measurements">
+            <div class="heading-2">Categories and Measurements</div>
+            <div class="flex">
+                <div class="categories">
+                    <div class="heading-3">Patient Categories</div>
+                    <div class="outlined">
+                        <div>
+                            <input type="checkbox">
+                            Indwelling Plural Catheter
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            Asthma
+                        </div>
+                    </div>
+
+                </div>
+                <div class="measurements">
+                    <div class="heading-3">Patient Measurements</div>
+                    <div class="outlined">
+                        <div class="measurement-group">
+                            <b>Indwelling Plural Catheter</b>
+                            <div>
+                                <input type="checkbox">
+                                ECOG
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                Quality of Life (QL-5D-5L)
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                HADS Score
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                VAS Breathlessness
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                VAS Pain
+                            </div>
+                        </div>
+                        <div class="measurement-group">
+                            <b>Asthma</b>
+                            <div>
+                                <input type="checkbox">
+                                Quality of Life (QL-5D-5L)
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                VAS Breathlessness
+                            </div>
+                        </div>
+
+                        <div class="measurement-group">
+                            <b>Indwelling Plural Catheter</b>
+                            <div>
+                                <input type="checkbox">
+                                ECOG
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                Quality of Life (QL-5D-5L)
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                HADS Score
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                VAS Breathlessness
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                VAS Pain
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="pointer" type="submit" (click)="onSubmit()">Add Patient</button>
+</div>

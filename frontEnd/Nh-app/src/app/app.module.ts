@@ -1,18 +1,41 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TesterComponent } from './tester/tester.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { AddPatientComponent } from './components/add-patient/add-patient.component';
+import { AddStaffComponent } from './components/add-staff/add-staff.component';
+import { CommonModule } from '@angular/common';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlertsComponent } from './components/alerts/alerts.component';
+import { AuthenticatedLayoutComponent } from './components/authenticated-layout/authenticated-layout.component';
+import { AnonymousLayoutComponent } from './components/anonymous-layout/anonymous-layout.component';
+import { LoginComponent } from './components/registration/login/login.component'
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TesterComponent
+    NavBarComponent,
+    AddPatientComponent,
+    AddStaffComponent,
+    AlertsComponent,
+    AuthenticatedLayoutComponent,
+    AnonymousLayoutComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  exports: [
+    NavBarComponent,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

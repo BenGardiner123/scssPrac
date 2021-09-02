@@ -1,0 +1,116 @@
+<div class="container">
+    <div class="success" *ngIf="success">
+        <div></div>
+        <div class="AlertContainer">
+            <img class="AlertIcon" src="../../../assets/Images/checkmark.png">
+        </div>
+        <div>
+            <h3>Success</h3>
+            <h5>Successfully added a patient!</h5>
+        </div>  
+    </div>
+    <div class="fail" *ngIf="fail">
+        <div></div>
+        <div class="AlertContainer">
+            <img class="AlertIcon" src="../../../assets/Images/Exclamation1.png">
+        </div>
+        <div>
+            <h3>Unsuccesful</h3>
+            <h5>Please check the highlighted fields.</h5>
+        </div>  
+    </div>
+    <div class="heading">Register Staff</div>
+    <div class="contents flex">
+        <div class="staff-information">
+            <div class="heading-2"></div>
+            <form [formGroup]="staffInformationForm" (ngSubmit)="onSubmit()">
+                <div class="">
+                    <label>Staff ID</label>
+                    <input type="number" formControlName="staffId">
+                </div>
+                <div class="">
+                    <label>Given Name</label>
+                    <input type="number" formControlName="givenName">
+                </div>
+                <div class="">
+                    <label>Family Name</label>
+                    <input type="text" formControlName="familyName">
+                </div>
+                <div class="">
+                    <label>Password</label>
+                    <input type="text" formControlName="password">
+                </div>
+                <div class="">
+                    <label>Role ID</label>
+                    <input type="text" formControlName="roleId">
+                </div>
+            </form>
+        </div>
+
+
+        <div class="categories-measurements">
+            <div class="heading-2"></div>
+            <div class="flex">
+                
+                <div class="measurements">
+                    <div class="heading-3">Teams</div>
+                    <div class="outlined">
+                        <div class="measurement-group">
+                            <b>Nurses</b>
+                            <div>
+                                <input type="checkbox">
+                                Nurse Unit Manager
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                Clinical nurse consultant
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                Junior nurse
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                Ward based nurse
+                            </div>
+                        </div>
+                        
+
+                        <div class="measurement-group">
+                            <b>Doctors</b>
+                            <div>
+                                <input type="checkbox">
+                                Head of unit
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                Fellow 
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                Consultants sessional 
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                Advanced trainee 
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                Registrar 
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                Resident
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                Intern
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="pointer" type="submit" (click)="onSubmit()">Add Staff</button>
+</div>

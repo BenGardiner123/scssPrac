@@ -1,0 +1,80 @@
+$color_1: white;
+$color_2: rgb(106, 106, 106);
+$color_3: red;
+$font_family_1: Arial, Helvetica, sans-serif;
+$background_color_1: rgb(20, 100, 180);
+$background_color_2: rgb(255, 255, 255);
+$background_color_3: rgba(255, 255, 255, 0.246);
+$background_color_4: white;
+
+/* Containers */
+
+div {
+	color: $color_1;
+	font-weight: 100;
+	font-family: $font_family_1;
+	font-size: 2.5vh;
+	user-select: none;
+}
+.NavbarContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 20vw;
+	max-width: 15vw;
+	height: 100%;
+	background-color: $background_color_1;
+}
+.LinkContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.Logo {
+	text-align: center;
+	margin-bottom: 2vh;
+	font-weight: 600;
+	font-size: 3vw;
+	padding: 1vh;
+	color: $color_2;
+	background-color: $background_color_2;
+}
+
+/* Links */
+
+.Link {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 2vh;
+	cursor: pointer;
+	&:hover {
+		background-color: $background_color_3;
+	}
+}
+.LinkText {
+	margin-left: 0.5vw;
+}
+
+/* Alert Icon */
+
+.AlertContainer {
+	margin-right: 0.5vw;
+	height: 2vh;
+}
+.AlertIcon {
+	height: 5vh;
+	margin-top: -1.3vh;
+}
+.AlertNumber {
+	margin-right: 0.5vw;
+	height: 2.5vh;
+	width: 2.5vh;
+	background-color: $background_color_4;
+	border-radius: 10vh;
+	position: absolute;
+	margin-top: -2.7vh;
+	margin-left: 3.3vh;
+	color: $color_3;
+	text-align: center;
+}

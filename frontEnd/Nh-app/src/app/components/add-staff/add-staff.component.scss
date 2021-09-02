@@ -1,0 +1,229 @@
+.flex{
+    display: flex;
+}
+
+input::placeholder{
+    color: gray;
+}
+
+.outlined{
+    border: lightgrey 1px solid;
+    border-radius: 2px;
+}
+
+.container{
+    height: 100%;
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading{
+    margin: 5vh 0 1vh 0;
+}
+
+.heading-2{
+    margin: 0 5vw 2vh 5vw;
+    text-align: center;
+}
+
+.contents{
+    height: 70vh;
+}
+
+.categories .outlined, .measurements .outlined{
+    padding: 2vh 2vw;
+    max-height: 50vh;
+    height: 50vh;
+}
+
+.measurements .outlined{
+    overflow-y: scroll;
+}
+
+.categories{
+    margin-right: 1vw;
+}
+
+.measurement-group{
+    margin-bottom: 2vh;
+}
+
+
+
+//---------Staff Info---------//
+
+.staff-information{
+    display: grid;
+    width: 27vw;
+    margin-top: -8rem;
+    margin-right: 1rem;
+}
+
+.staff-information, .categories-measurements{
+    padding: 2vh 2vw;
+    
+}
+
+.categories-measurements{
+    margin-right: 18vw;
+}
+
+.staff-information {
+    margin-bottom: 0.5vh;
+   
+}
+
+.staff-information .flex input, .staff-information .flex select{
+    margin-left: 2vw;
+    padding: .5vh 0.5vw;
+}
+
+
+
+//---------Form---------//
+
+label{
+    display: inline-block;
+    width: 60%;
+    text-align: end;
+}
+
+form input, form select{
+    display: inline-block;
+    width: auto;
+    margin-left: 3%;
+    outline: none;
+    padding: 0.5vh;
+}
+
+
+form *{
+    padding-bottom: 1vh;
+}
+
+form .ng-invalid{ 
+    border-right: 1px solid grey;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-left: 3px solid red;
+    border-radius: 3px;
+}
+
+//---------Button---------//
+
+button{
+    color: white;
+    background-color: #1465B4;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 2vh 5vw;
+    text-align: center;
+    cursor: pointer;
+} 
+
+
+
+//---------Pop-ups---------//
+
+// Success
+.success > :first-child{
+    background-color: rgb(208, 248, 176);
+    width: 1%;
+}
+
+.AlertContainer {
+    display: flex;
+    align-self: center;
+    padding-left: 0.5vw;
+    padding-right: 2vw ;
+}
+
+.AlertIcon {
+	height: 5vh;
+	margin-top: -1vh;
+}
+
+.success{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.success h5{
+    padding-bottom: 2vh;
+    margin: 0;
+}
+
+.success h3{
+    margin: 0;
+    padding-top: 2vh;
+}
+
+// Fail
+
+.fail > :first-child{
+    background-color: rgb(248, 176, 176);
+    width: 1%;
+}
+
+.AlertContainer {
+    display: flex;
+    align-self: center;
+    padding-left: 0.5vw;
+    padding-right: 2vw ;
+}
+
+.AlertIcon {
+	height: 5vh;
+	margin-top: -1vh;
+}
+
+.fail{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fail h5{
+    padding-bottom: 2vh;
+    margin: 0;
+}
+
+.fail h3{
+    margin: 0;
+    padding-top: 2vh;
+}
+
+
+/* Possible Global Styles */
+
+*{
+    font-family: Arial, Helvetica, sans-serif, Courier, monospace;
+}
+
+
+// Removes arrows from number inputs
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+.heading{
+    font-size: 2rem;
+}
+
+.heading-2{
+    font-size: 1.5rem;
+}
+
+.heading-3{
+    font-size: 1.1rem;
+} 
