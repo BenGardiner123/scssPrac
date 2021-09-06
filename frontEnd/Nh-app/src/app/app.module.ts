@@ -12,7 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertsComponent } from './components/alerts/alerts.component';
 import { AuthenticatedLayoutComponent } from './components/authenticated-layout/authenticated-layout.component';
 import { AnonymousLayoutComponent } from './components/anonymous-layout/anonymous-layout.component';
-import { LoginComponent } from './components/registration/login/login.component'
+import { LoginComponent } from './components/registration/login/login.component';
+import { AuthorizeViewComponent } from './security/authorize-view/authorize-view.component'
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { LoginComponent } from './components/registration/login/login.component'
     AlertsComponent,
     AuthenticatedLayoutComponent,
     AnonymousLayoutComponent,
-    LoginComponent
+    LoginComponent,
+    AuthorizeViewComponent
   ],
   imports: [
     BrowserModule,

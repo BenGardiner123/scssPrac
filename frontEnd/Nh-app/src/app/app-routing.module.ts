@@ -15,7 +15,7 @@ const routes: Routes = [
     { path: 'staff', component: AddStaffComponent },
     { path: 'patient', component: AddPatientComponent },
   ] },
-  { path: '', component: AnonymousLayoutComponent, children: [
+  { path: '**', component: AnonymousLayoutComponent, children: [
     { path:'login', component: LoginComponent},
   ] }
 ];
